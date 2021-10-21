@@ -1,30 +1,45 @@
-import logo from '../../assets/logo/logo.svg';
-import './App.css';
-import firebase from '../../config/firebase'
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from '../Dashboard';
 import Login from '../Login';
 import Register from '../Register';
+import './App.css';
 
-console.log('confi nya >>', firebase)
+const initialState = {
+  popup: false,
+  isLogin: false
+}
+
+const reducer = (state = initialState, action) => {
+  if (action.type === 'CHANGE_POPUP') {
+    return {
+      ...state,
+      popup: action.value
+    }
+  }
+  if (action.type === 'CHANGE_ISLOGIN') {
+    return {
+      ...state,
+      isLogin: action.value
+    }
+  }
+  return state;
+}
+const store = createStore(reducer)
+
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Switch>
+    <Provider store={store}>
+      <Router>
+        <div>
           <Route path="/" exact component={Dashboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-        </Switch>
-      </div>
-    </Router >
+        </div>
+      </Router >
+    </Provider>
   );
 }
 
