@@ -1,24 +1,30 @@
 import logo from '../../assets/logo/logo.svg';
 import './App.css';
+import firebase from '../../config/firebase'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Dashboard from '../Dashboard';
+import Login from '../Login';
+import Register from '../Register';
+
+console.log('confi nya >>', firebase)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Nyok
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+        </Switch>
+      </div>
+    </Router >
   );
 }
 
