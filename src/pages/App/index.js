@@ -5,6 +5,7 @@ import Dashboard from '../Dashboard';
 import Login from '../Login';
 import Register from '../Register';
 import './App.css';
+import Artikel from '../Artikel';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" exact component={Dashboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/artikel" component={Artikel} />
         </div>
       </Router >
     </Provider>

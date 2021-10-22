@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { Button, Card, Col, Container, Form, Row, FloatingLabel } from 'react-bootstrap';
-import firebase from '../../config/firebase';
+import { Card, Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import Buttonn from '../../components/kecil/Button';
+import { registerUserAPI } from '../../config/redux/action';
 
 
 
 class Register extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
     }
 
     handleChangeText = (e) => {
@@ -16,19 +18,17 @@ class Register extends Component {
         })
     }
 
-    handleRegisterSubmit = () => {
+    handleRegisterSubmit = async () => {
         const { email, password } = this.state;
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(res => {
-                console.log('success: ', res);
+        const { history } = this.props;
+        const res = await this.props.registerAPI({ email, password }).catch(err => err);
+        if (res) {
+            this.setState({
+                email: '',
+                password: '',
             })
-            .catch(function (error) {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-
-                console.log(errorCode, errorMessage)
-            });
-
+            history.push('/login')
+        }
     }
 
     render() {
@@ -57,6 +57,7 @@ class Register extends Component {
                                                 placeholder='Email'
                                                 type='text'
                                                 onChange={this.handleChangeText}
+                                                value={this.state.email}
                                             />
                                         </FloatingLabel>
                                     </Form.Group>
@@ -68,52 +69,39 @@ class Register extends Component {
                                                 id='password'
                                                 placeholder='Password'
                                                 type='password'
-                                                onChange={this.handleChangeText} />
+                                                onChange={this.handleChangeText}
+                                                value={this.state.password}
+                                            />
                                         </FloatingLabel>
                                     </Form.Group>
 
                                 </Form>
-                                <Button
-                                    className="mb-4"
-                                    style={btn} variant="success"
+                                <Buttonn
                                     onClick={this.handleRegisterSubmit}
-                                >
-                                    Submit
-                                </Button>
+                                    title='Register'
+                                    loading={this.props.isLoading} />
                             </Card>
                         </Col>
                     </Row>
                 </Container>
-
-
-
-
-
-
-
-
-
-
-
-                {/* <p>Register Page</p>
-                <input id='email' placeholder='Email' type='text' onChange={this.handleChangeText} />
-                <input id='password' placeholder='Password' type='password' onChange={this.handleChangeText} />
-                <button>Register</button>
-                <button onClick={this.handleRegisterSubmit}>Go to Dashboard</button> */}
             </div>
         )
     }
 }
 
-export default Register;
+const reduxState = (state) => ({
+    isLoading: state.isLoading
+})
+
+const reduxDispatch = (dispatch) => ({
+    registerAPI: (data) => dispatch(registerUserAPI(data))
+})
+
+export default connect(reduxState, reduxDispatch)(Register);
 
 const gambar = {
     height: '10%',
     width: '10%',
-    marginLeft: 'auto',
-    marginRight: 'auto'
-}
-const btn = {
     marginLeft: 'auto',
     marginRight: 'auto'
 }
