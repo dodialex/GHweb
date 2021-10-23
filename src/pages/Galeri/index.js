@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Artikel extends Component {
+class Galeri extends Component {
     render() {
         return (
             <div>
-                Artikel
+                Galeri
             </div>
         )
     }
 }
 
-export default Artikel
+export default Galeri

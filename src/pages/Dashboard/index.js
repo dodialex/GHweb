@@ -13,11 +13,15 @@ class Dashboard extends Component {
     handleSaveArtikel = () => {
         const { title, content } = this.state;
         const { saveArtikel } = this.props;
+        const userData = JSON.parse(localStorage.getItem('userData')) //ini juga hapus
+
         const data = {
             title: title,
             content: content,
             date: new Date().getTime(),
-            userId: this.props.userData.uid
+
+            userId: userData.uid //hapus juga ini
+            // userId: this.props.userData.uid //uncomment kalo diatas dihapus
         }
         saveArtikel(data)
         console.log(data)
@@ -30,7 +34,7 @@ class Dashboard extends Component {
     }
 
     render() {
-        const { title, content, date } = this.state
+        const { title, content } = this.state
         return (
             <div>
                 <input placeholder='title' value={title} onChange={(e) => this.onInputChange(e, 'title')} />

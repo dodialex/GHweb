@@ -1,21 +1,23 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { store } from '../../config/redux';
-import Dashboard from '../Dashboard';
-import Login from '../Login';
-import Register from '../Register';
+import { store } from '../config/redux';
 import './App.css';
-import Artikel from '../Artikel';
+import { Register, Login, Dashboard, Artikel, Home, Galeri, TentangKami } from '../pages';
+import Header from '../components/besar/Header';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div>
-          <Route path="/" exact component={Dashboard} />
+          <Header />
+          <Route path="/" exact component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/dashboard" component={Dashboard} />
           <Route path="/artikel" component={Artikel} />
+          <Route path="/galeri" component={Galeri} />
+          <Route path="/tentangkami" component={TentangKami} />
         </div>
       </Router >
     </Provider>

@@ -19,19 +19,20 @@ class Login extends Component {
     }
 
     handleLoginSubmit = async () => {
-        const { email, password } = this.state;
+        // const { email, password } = this.state;
         const { history } = this.props;
-        const res = await this.props.loginAPI({ email, password }).catch(err => err);
-        if (res) {
-            console.log('login sukses')
-            this.setState({
-                email: '',
-                password: '',
-            })
-            history.push('/')
-        } else {
-            console.log('login failed')
-        }
+        // const res = await this.props.loginAPI({ email, password }).catch(err => err);
+        // if (res) {
+        //     console.log('login sukses')
+        //     localStorage.setItem('userData', JSON.stringify(res)) //hapus dan di login juga
+        //     this.setState({
+        //         email: '',
+        //         password: '',
+        //     })
+        history.push('/')
+        // } else {
+        //     console.log('login failed')
+        // }
     }
     render() {
         return (

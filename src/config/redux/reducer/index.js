@@ -2,7 +2,8 @@ const initialState = {
     popup: false,
     isLogin: false,
     isLoading: false,
-    user: 'Dodi'
+    user: {},
+    artikel: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +29,12 @@ const reducer = (state = initialState, action) => {
         return {
             ...state,
             isLoading: action.value
+        }
+    }
+    if (action.type === 'SET_ARTIKEL') {
+        return {
+            ...state,
+            artikel: action.value
         }
     }
     return state;
