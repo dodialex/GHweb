@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div>
             <Container fluid style={container}>
-                <Row>
+                <Row xs={1}>
                     <Col>
                         <Nav className="justify-content-center">
                             <Nav.Link href='https://www.facebook.com/Gekari%20Haleluya'>
@@ -61,7 +61,7 @@ const colAtas = {
     textAlign: 'center',
 }
 const img = {
-    marginRight: '15px'
+    marginRight: '6px'
 }
 const containerBawah = {
     backgroundColor: colors.background.black

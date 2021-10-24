@@ -14,6 +14,10 @@ export const colors = {
     },
     background: {
         grey: mainColors.grey1,
-        black: mainColors.black1
+        black: mainColors.black1,
+        green: mainColors.green1
+    },
+    border: {
+        green: mainColors.green1,
     }
 }
