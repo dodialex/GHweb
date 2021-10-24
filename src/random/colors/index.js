@@ -11,5 +11,9 @@ export const colors = {
         primary: mainColors.green1,
         secondary: mainColors.grey1,
         tertier: mainColors.black1
+    },
+    background: {
+        grey: mainColors.grey1,
+        black: mainColors.black1
     }
 }

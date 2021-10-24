@@ -4,6 +4,7 @@ import { store } from '../config/redux';
 import './App.css';
 import { Register, Login, Dashboard, Artikel, Home, Galeri, TentangKami } from '../pages';
 import Header from '../components/besar/Header';
+import Footer from '../components/besar/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/artikel" component={Artikel} />
           <Route path="/galeri" component={Galeri} />
           <Route path="/tentangkami" component={TentangKami} />
+          <Footer />
         </div>
       </Router >
     </Provider>

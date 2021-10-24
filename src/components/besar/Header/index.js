@@ -6,7 +6,7 @@ import { colors, weight } from '../../../random';
 
 const Header = () => {
     return (
-        <div>
+        <div style={div}>
             <Navbar style={nav} fixed="top" collapseOnSelect expand="lg">
                 <Container>
                     <Link to='/'>
@@ -21,7 +21,7 @@ const Header = () => {
                         </Navbar.Brand>
                     </Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse style={col} id="responsive-navbar-nav">
+                    <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='mx-auto'>
                         </Nav>
                         <Nav>
@@ -49,7 +49,8 @@ export default Header;
 const nav = {
     backgroundColor: 'rgba(0, 128, 0, 0.8)'
 }
-const col = {
+const div = {
+    marginBottom: '56px'
 }
 
 const navLink = {
