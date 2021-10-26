@@ -2,9 +2,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { store } from '../config/redux';
 import './App.css';
-import { Register, Login, Dashboard, Artikel, Home, Galeri, TentangKami } from '../pages';
-import Header from '../components/besar/Header';
-import Footer from '../components/besar/Footer';
+import { Register, Login, Dashboard, IbadahOnline, Home, TimPengembalaan, TentangKami, Taruna, NextGen, Youth, HaleluyaMinistry } from '../pages';
+import { Header, Footer } from '../components/besar';
 
 function App() {
   return (
@@ -16,9 +15,13 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/artikel" component={Artikel} />
-          <Route path="/galeri" component={Galeri} />
-          <Route path="/tentangkami" component={TentangKami} />
+          <Route path="/ibadahonline" component={IbadahOnline} />
+          <Route path="/timpengembalaan" component={TimPengembalaan} />
+          <Route path='/tentangkami' component={TentangKami} />
+          <Route path='/taruna' component={Taruna} />
+          <Route path='/nextgen' component={NextGen} />
+          <Route path='/youth' component={Youth} />
+          <Route path='/haleluyaministry' component={HaleluyaMinistry} />
           <Footer />
         </div>
       </Router >

@@ -13,6 +13,6 @@ code {
     monospace; */
 }
 * {
-  background-image: url('./assets/logo/background.svg');
-  background-repeat: repeat;
+  /* background-image: url('./assets/logo/background.svg'); */
+  /* background-size: cover; */
 }

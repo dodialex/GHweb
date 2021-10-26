@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, Button, Row, Col } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { colors, weight } from '../../../random';
 
 const Content = ({ linknya, title, judul, tanggal }) => {

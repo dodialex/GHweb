@@ -3,7 +3,7 @@ import { Content } from '../../components/artikel'
 import { Button, Container } from 'react-bootstrap'
 import { colors, weight } from '../../random';
 
-class Artikel extends Component {
+class IbadahOnline extends Component {
     render() {
         return (
             <div>
@@ -34,7 +34,7 @@ class Artikel extends Component {
     }
 }
 
-export default Artikel;
+export default IbadahOnline;
 const container = {
     textAlign: 'center',
 }

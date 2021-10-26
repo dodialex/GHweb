@@ -1,6 +1,6 @@
 import React from 'react';
-import { Carousel, Container, Row } from 'react-bootstrap'
-import { colors, weight } from '../../../random';
+import { Container, Carousel, Row } from 'react-bootstrap';
+import { colors, weight } from '../../../random'
 
 const Carousell = () => {
 
@@ -39,6 +39,8 @@ const Carousell = () => {
                         alt="Third slide"
                     />
                 </Carousel.Item>
+
+
             </Carousel>
             <Container fluid style={container}>
                 <Container>
@@ -65,8 +67,8 @@ const row = {
 }
 const container = {
     backgroundColor: colors.background.grey,
-
 }
+
 const caro = {
-    height: '360px'
+    height: '362px'
 }

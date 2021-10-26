@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LogoPutih } from '../../../assets/logo';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { LogoPutih } from '../../../assets/logo';
 import { colors, weight } from '../../../random';
 
 const Header = () => {
@@ -29,14 +29,33 @@ const Header = () => {
                                 <Link to='/' style={navLink}>Beranda</Link>
                             </Nav.Link>
                             <Nav.Link>
-                                <Link to='/artikel' style={navLink}>Artikel</Link>
-                            </Nav.Link>
-                            <Nav.Link>
-                                <Link to='/galeri' style={navLink}>Galeri</Link>
-                            </Nav.Link>
-                            <Nav.Link>
                                 <Link to='/tentangkami' style={navLink}>Tentang Kami</Link>
                             </Nav.Link>
+                            <Nav.Link>
+                                <Link to='/ibadahonline' style={navLink}>Ibadah Online</Link>
+                            </Nav.Link>
+                            <Nav.Link id="navbarScrollingDropdown">
+                                <Link to='/timpengembalaan' style={navLink}>Tim Pengembalaan</Link>
+                            </Nav.Link>
+
+
+                            <NavDropdown title={<span style={navLink}>Komunitas</span>} id="navbarScrollingDropdown">
+                                <NavDropdown.Item>
+                                    <Link to='/taruna' style={navLinkPop}>Taruna</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item>
+                                    <Link to='/nextgen' style={navLinkPop}>Next Generation</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item>
+                                    <Link to='/youth' style={navLinkPop}>Youth</Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item>
+                                    <Link to='/haleluyaministry' style={navLinkPop}>Haleluya Ministry</Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -47,15 +66,20 @@ const Header = () => {
 
 export default Header;
 const nav = {
-    backgroundColor: 'rgba(0, 128, 0, 0.8)'
+    backgroundColor: colors.background.headerFooter
 }
 const div = {
     marginBottom: '56px'
 }
-
 const navLink = {
     textDecoration: 'none',
     color: colors.text.secondary,
+    fontFamily: 'Poppins',
+    fontWeight: weight.font.bold
+}
+const navLinkPop = {
+    textDecoration: 'none',
+    color: colors.text.primary,
     fontFamily: 'Poppins',
     fontWeight: weight.font.bold
 }

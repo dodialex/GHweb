@@ -1,12 +1,14 @@
 import React from 'react';
 import { Col, Container, Image, Row, Nav } from 'react-bootstrap';
 import { colors, weight } from '../../../random';
+import moment from 'moment'
+const dateTime = new Date()
 
 const Footer = () => {
     return (
         <div>
             <Container fluid style={container}>
-                <Row xs={1}>
+                <Row xs={1} md={1}>
                     <Col>
                         <Nav className="justify-content-center">
                             <Nav.Link href='https://www.facebook.com/Gekari%20Haleluya'>
@@ -44,10 +46,8 @@ const Footer = () => {
                     </Col>
 
                 </Row>
-            </Container>
-            <Container fluid style={containerBawah}>
                 <Row style={row}>
-                    <p> &copy; 2021. Gekari Haleluya. Privacy Policy</p>
+                    <p> &copy; {moment(dateTime).format('YYYY')}. Gekari Haleluya. Privacy Policy</p>
                 </Row>
             </Container>
         </div>
@@ -56,19 +56,15 @@ const Footer = () => {
 
 export default Footer;
 const container = {
-}
-const colAtas = {
-    textAlign: 'center',
+    backgroundColor: colors.background.headerFooter
 }
 const img = {
     marginRight: '6px'
 }
-const containerBawah = {
-    backgroundColor: colors.background.black
-}
+
 const row = {
     textAlign: 'center',
-    paddingTop: '10px',
+    paddingTop: '20px',
     color: colors.text.secondary,
     fontFamily: 'Poppins',
     fontWeight: weight.font.light,

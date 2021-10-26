@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Galeri extends Component {
+class Youth extends Component {
     render() {
         return (
             <div>
-                Galeri
+                Youth Page
             </div>
         )
     }
 }
 
-export default Galeri
+export default Youth
