@@ -4,7 +4,7 @@ class Taruna extends Component {
     render() {
         return (
             <div>
-                Taruna Page
+                halaman taruna
             </div>
         )
     }
