@@ -1,2 +1,2 @@
 export * from './logo';
-export * from './font';
+export * from './gambar';

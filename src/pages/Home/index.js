@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { Carousell, CardJadwal } from '../../components/home';
 import { Container, Row, Col } from 'react-bootstrap';
-import { weight } from '../../random';
+import Judul from '../../components/kecil/Judul';
 
 class Home extends Component {
     render() {
         return (
             <div>
                 <Carousell />
-                <p style={p}>Ibadah Dalam Sepekan</p>
+                <div style={{ paddingTop: '10%' }}>
+                    <Judul teks='Ibadah Dalam Sepekan' />
+                </div>
                 <Container>
                     <Row style={row2}>
                         <Col md={4}></Col>
@@ -42,13 +44,6 @@ class Home extends Component {
 }
 
 export default Home;
-const p = {
-    textAlign: 'center',
-    paddingTop: '10%',
-    fontFamily: 'Poppins',
-    fontWeight: weight.font.bold,
-    fontSize: '30px'
-}
 const row2 = {
     margin: '3%',
 }
