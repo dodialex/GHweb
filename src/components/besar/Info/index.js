@@ -6,9 +6,14 @@ const Info = () => {
     return (
         <div>
             <Container fluid style={container}>
-                <Row>
+                <Row xs={1} md={2}>
                     <Col>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <Judul teks='Teens Gekari Haleluya' />
+                        <p>description</p>
                     </Col>
                     <Col>
                         <Image fluid
@@ -24,6 +29,10 @@ const Info = () => {
 export default Info;
 const container = {
     paddingTop: '8%'
+}
+const col = {
+    alignItems: 'flex-end',
+    justifyContent: 'center'
 }
 const img = {
     width: '100%',

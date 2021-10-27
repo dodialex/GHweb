@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -14,7 +15,7 @@ const FotoFoto = ({ foto1, foto2, foto3, foto4, foto5, foto6 }) => {
         slidesToScroll: 1
     };
     return (
-        <div>
+        <Container fluid>
             <Slider {...settings} style={slickSlide}>
                 <div>
                     <img alt='tarunaImg' src={foto1} />
@@ -35,7 +36,7 @@ const FotoFoto = ({ foto1, foto2, foto3, foto4, foto5, foto6 }) => {
                     <img alt='tarunaImg' src={foto6} />
                 </div>
             </Slider>
-        </div >
+        </Container>
     )
 }
 
