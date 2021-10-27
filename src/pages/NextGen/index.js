@@ -1,49 +1,28 @@
-// import React, { Component } from 'react';
-// import Slider from "react-slick";
-// import 'slick-carousel/slick/slick-theme.css';
-// import 'slick-carousel/slick/slick.css';
-// import { colors } from '../../random';
-// import './nextgen.css';
+import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
+import { FotoFoto, Info } from '../../components/besar';
+import { colors } from '../../random';
 
-// class NextGen extends Component {
-//     render() {
-//         const settings = {
-//             dots: true,
-//             autoplay: true,
-//             infinite: true,
-//             slidesToShow: 3,
-//             slidesToScroll: 1
-//         };
-//         return (
-//             <div>
-//                 <Slider {...settings} style={slickSlide}>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51631272222_b3d4f0fa19_z.jpg' />
-//                     </div>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51632751519_03a4c8aa73_z.jpg' />
-//                     </div>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51632328633_b9f8b3b9a2_z.jpg' />
-//                     </div>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51632103661_3bd0170a66_z.jpg' />
-//                     </div>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51632751699_2c58cf7070_z.jpg' />
-//                     </div>
-//                     <div>
-//                         <img alt='tarunaImg' src='https://live.staticflickr.com/65535/51632953475_a7e19148ab_z.jpg' />
-//                     </div>
-//                 </Slider>
-//                 <br />
-//                 <p>sasasas</p>
-//             </div >
-//         )
-//     }
-// }
+class NextGen extends Component {
+    render() {
+        return (
+            <Container style={container} fluid>
+                <div>
+                    <FotoFoto
+                        foto1='https://live.staticflickr.com/65535/51633040975_1455138117_z.jpg'
+                        foto2='https://live.staticflickr.com/65535/51631364697_a962098b27_z.jpg'
+                        foto3='https://live.staticflickr.com/65535/51632837819_e6810e9a95_z.jpg'
+                        foto4='https://live.staticflickr.com/65535/51631364757_d306569ecc_z.jpg'
+                        foto5='https://live.staticflickr.com/65535/51631364792_ca80724900_z.jpg'
+                        foto6='https://live.staticflickr.com/65535/51631364842_d810512671_z.jpg' />
+                </div>
+                <Info />
+            </Container >
+        )
+    }
+}
 
-// export default NextGen;
-// const slickSlide = {
-//     backgroundColor: colors.background.grey
-// }
+export default NextGen;
+const container = {
+    backgroundColor: colors.background.grey
+}

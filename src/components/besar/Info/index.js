@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import Judul from '../../kecil/Judul';
+import { weight } from '../../../random';
 
 const Info = () => {
     return (
@@ -12,8 +12,8 @@ const Info = () => {
                         <br />
                         <br />
                         <br />
-                        <Judul teks='Teens Gekari Haleluya' />
-                        <p>description</p>
+
+                        <p style={p}>description</p>
                     </Col>
                     <Col>
                         <Image fluid
@@ -37,4 +37,10 @@ const col = {
 const img = {
     width: '100%',
     height: '100%'
+}
+const p = {
+    textAlign: 'center',
+    fontFamily: 'Poppins',
+    fontWeight: weight.font.bold,
+    fontSize: '30px'
 }
