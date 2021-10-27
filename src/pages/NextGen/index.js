@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { FotoFoto, Info } from '../../components/besar';
 import { colors } from '../../random';
+import { InfoPKS } from '../../components/besar';
 
 class NextGen extends Component {
     render() {
@@ -16,7 +17,22 @@ class NextGen extends Component {
                         foto5='https://live.staticflickr.com/65535/51631364792_ca80724900_z.jpg'
                         foto6='https://live.staticflickr.com/65535/51631364842_d810512671_z.jpg' />
                 </div>
-                <Info />
+                <Info
+                    teks='Next Generation Gekari'
+                    gambar="https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg" />
+                <hr />
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
             </Container >
         )
     }

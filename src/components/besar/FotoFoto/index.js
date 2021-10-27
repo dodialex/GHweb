@@ -12,10 +12,10 @@ const FotoFoto = ({ foto1, foto2, foto3, foto4, foto5, foto6 }) => {
         autoplay: true,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
     };
     return (
-        <Container fluid>
+        <Container fluid style={container}>
             <Slider {...settings} style={slickSlide}>
                 <div>
                     <img alt='tarunaImg' src={foto1} />
@@ -43,6 +43,8 @@ const FotoFoto = ({ foto1, foto2, foto3, foto4, foto5, foto6 }) => {
 
 export default FotoFoto;
 const slickSlide = {
-    backgroundColor: colors.background.grey
+    backgroundColor: colors.background.grey,
 }
-
+const container = {
+    marginLeft: '-0.5px'
+}

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import { FotoFoto, Info } from '../../components/besar';
+import { FotoFoto, Info, InfoPKS } from '../../components/besar';
 import { colors } from '../../random';
-import './taruna.css';
 
 class Taruna extends Component {
     render() {
@@ -19,7 +16,23 @@ class Taruna extends Component {
                         foto5='https://live.staticflickr.com/65535/51631364792_ca80724900_z.jpg'
                         foto6='https://live.staticflickr.com/65535/51631364842_d810512671_z.jpg' />
                 </div>
-                <Info />
+                <Info
+                    teks='Teens Gekari'
+                    gambar="https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg" />
+                <hr />
+
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
+                <InfoPKS
+                    gambarPks='https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg'
+                    teksNamaPks='Nama PKS'
+                    teksKontakPks='Kontak PKS' />
             </Container >
         )
     }
@@ -27,5 +40,5 @@ class Taruna extends Component {
 
 export default Taruna;
 const container = {
-    backgroundColor: colors.background.grey
+    backgroundColor: colors.background.grey,
 }

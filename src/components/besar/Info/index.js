@@ -1,8 +1,8 @@
-import React from 'react'
-import { Container, Row, Col, Image } from 'react-bootstrap'
-import { weight } from '../../../random';
+import React from 'react';
+import { Col, Container, Image, Row } from 'react-bootstrap';
+import Judul from '../../kecil/Judul';
 
-const Info = () => {
+const Info = ({ teks, gambar, teksNama, teksKontak, gambarPks, teksNamaPks, teksKontakPks }) => {
     return (
         <div>
             <Container fluid style={container}>
@@ -12,15 +12,17 @@ const Info = () => {
                         <br />
                         <br />
                         <br />
-
-                        <p style={p}>description</p>
+                        <Judul teks={teks} />
                     </Col>
                     <Col>
                         <Image fluid
                             style={img}
-                            src="https://live.staticflickr.com/65535/51632853894_a65955c254_z.jpg" />
+                            src={gambar} />
+                        <Judul teks={teksNama} />
+                        <Judul teksKontak={teksKontak} />
                     </Col>
                 </Row>
+
             </Container>
         </div>
     )
@@ -30,17 +32,7 @@ export default Info;
 const container = {
     paddingTop: '8%'
 }
-const col = {
-    alignItems: 'flex-end',
-    justifyContent: 'center'
-}
 const img = {
     width: '100%',
     height: '100%'
-}
-const p = {
-    textAlign: 'center',
-    fontFamily: 'Poppins',
-    fontWeight: weight.font.bold,
-    fontSize: '30px'
 }
